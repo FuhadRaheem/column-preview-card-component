@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+    --veryLightGray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--veryLightGray);
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--transparentWhite);
+}
+
+.container {
+    height: 60vh;
+    width: 55vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sedans {
+    background-color: var(--brightOrange);
+    border-radius: 10px 0 0 10px;
+    padding: 15%;
+}
+
+.suvs {
+    background-color: var(--darkCyan);
+    padding: 15%;
+}
+
+.luxurys {
+    background-color: var(--veryDarkCyan);
+    border-radius: 0 10px 10px 0;
+    padding: 15%;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--veryLightGray);
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+p {
+    line-height: 150%;
+}
+
+.sedans .btn {
+    height: 35px;
+    width: 120px;
+    color: var(--brightOrange);
+    background-color: var(--veryLightGray);
+    text-align: center;
+    line-height: 35px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.suvs .btn {
+    height: 35px;
+    width: 120px;
+    color: var(--darkCyan);
+    background-color: var(--veryLightGray);
+    text-align: center;
+    line-height: 35px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.luxurys .btn {
+    height: 35px;
+    width: 120px;
+    color: var(--veryDarkCyan);
+    background-color: var(--veryLightGray);
+    text-align: center;
+    line-height: 35px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.btn:hover {
+    color: var(--veryLightGray);
+    border: 2px solid var(--veryLightGray);
+    background-color: transparent;
+    transition: 0.3s all;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        height: 70vh;
+        width: 65vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        height: 50vh;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .sedans {
+        background-color: var(--brightOrange);
+        border-radius: 10px 10px 0 0;
+        padding: 15%;
+    }
+    
+    .luxurys {
+        background-color: var(--veryDarkCyan);
+        border-radius: 0 0 10px 10px;
+        padding: 15%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        height: 50vh;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        height: 40vh;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        height: 40vh;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+}
+
+/*
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+*/
